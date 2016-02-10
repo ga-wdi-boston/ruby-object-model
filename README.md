@@ -4,15 +4,18 @@
 
 ## Prerequisites
 
-- [ruby-vs-js-objects](https://github.com/ga-wdi-boston/ruby-vs-js-objects)
+-   [ga-wdi-boston/ruby-vs-js-objects](https://github.com/ga-wdi-boston/ruby-vs-js-objects)
 
 ## Objectives
 
 By the end of this, students should be able to:
 
--   Create a ruby class
--   Have a class inherit from another class
--   Have multiple class inheriterance chains
+-   Diagram the Ruby method lookup chain, and compare it to the JavaScript
+    prototype lookup chain.
+-   Compare Ruby inheritance with Ruby composition.
+-   Give two reasons why inheritance and composition are desirable.
+-   Write a class which inherits from another class.
+-   Describe why composition is preferred to inheritance.
 
 ## Preparation
 
