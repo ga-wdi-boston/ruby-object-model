@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
--
+- [ruby-vs-js-objects](https://github.com/ga-wdi-boston/ruby-vs-js-objects)
 
 ## Objectives
 
@@ -42,7 +42,44 @@ instances of the User object can inherit.  Now all instances of User can share i
 the common property of `totalDistance`
 
 But now in Ruby we have classes which we've already gone over.  Ruby classes have
-different ways of inheriting.
+different ways of inheriting. Take for example the following...
+
+Some objects can be classified in multiple ways. These multiple classifications often make sense as a hierarchy. For example, a `Dog` is a kind of `Pet`. It's also a kind of `Animal`. In ruby, we can share code (data or behavior) between two classes using **inheritance**. Let's look at an example of inheritance. Note that a ruby class can only inherit from one other class, so whether you name that class `Pet` or `Animal` will depend on your application.
+
+```ruby
+class Animal
+  def eat
+    puts "Nom nom nom"
+  end
+end
+
+class Dog < Animal
+end
+
+dog = Dog.new
+dog.eat #=> "Nom nom nom"
+
+class Dog < Animal
+  def speak
+    puts "WOOF"
+  end
+
+  def eat
+    puts "Slop slop slop"
+  end
+end
+
+dog.speak #=> "WOOF"
+dog.eat #=> "Slop slop slop"
+
+animal = Animal.new
+animal.eat #=> "Nom nom nom"
+animal.speak #=> NoMethodError
+```
+
+## Lab: Model Shapes Using Classes
+
+A square is a special kind of rectangle. Create a `Square` class that inherits from `Rectangle` and override any methods you need to change to represent the idea of a `Square` in ruby code.
 
 
 ## Additional Resources
