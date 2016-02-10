@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
--
+- [ruby-vs-js-objects](https://github.com/ga-wdi-boston/ruby-vs-js-objects)
 
 ## Objectives
 
@@ -20,7 +20,7 @@ By the end of this, students should be able to:
     this repository.
 1.  Install dependencies with `bundle install`.
 
-## Outline
+## JavaScript Inheriterance
 
 You already know how Javascript object inheritence works just in case you don't
 remeber here are some examples.  Remember that whole prototype thing?
@@ -41,8 +41,52 @@ In the case above we created an internal object on the User object from which ot
 instances of the User object can inherit.  Now all instances of User can share in
 the common property of `totalDistance`
 
+## Lab
+
+This shouldn't take long. In your squads use prototypical inheriterance to create
+a method on an object which other instances of that object can inherit.
+
+## Ruby Inheriterance
+
 But now in Ruby we have classes which we've already gone over.  Ruby classes have
-different ways of inheriting.
+different ways of inheriting. Take for example the following...
+
+Some objects can be classified in multiple ways. These multiple classifications often make sense as a hierarchy. For example, a `Dog` is a kind of `Pet`. It's also a kind of `Animal`. In ruby, we can share code (data or behavior) between two classes using **inheritance**. Let's look at an example of inheritance. Note that a ruby class can only inherit from one other class, so whether you name that class `Pet` or `Animal` will depend on your application.
+
+```ruby
+class Animal
+  def eat
+    puts "Nom nom nom"
+  end
+end
+
+class Dog < Animal
+end
+
+dog = Dog.new
+dog.eat #=> "Nom nom nom"
+
+class Dog < Animal
+  def speak
+    puts "WOOF"
+  end
+
+  def eat
+    puts "Slop slop slop"
+  end
+end
+
+dog.speak #=> "WOOF"
+dog.eat #=> "Slop slop slop"
+
+animal = Animal.new
+animal.eat #=> "Nom nom nom"
+animal.speak #=> NoMethodError
+```
+
+## Lab: Model Shapes Using Classes
+
+A square is a special kind of rectangle. Create a `Square` class that inherits from `Rectangle` and override any methods you need to change to represent the idea of a `Square` in ruby code.
 
 
 ## Additional Resources
