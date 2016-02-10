@@ -89,12 +89,12 @@ inheriterance works in JavaScript.
 
 ##Lab: Drawing the Ruby class method chain on your own
 
-For this lab please diagram the class method chain using the following requirements:
-- The class `Bronco` has an instance method called `suck`
-- `Bronco` inherits from the class `Football`
-- The class `Football` has an instance method called `play_game`
-- Create a new instance of a player on the Broncos eg. `manning = Bronco.new`
-- Diagram `manning.suck` and `manning.play_game`
+For this lab please diagram the method lookup chain using the following requirements:
+-   The class `DenverBroncos` has an instance method called `lose`.
+-   `DenverBroncos` inherits from the class `FootballTeam`.
+-   The class `FootballTeam` has an instance method called `play_game`.
+-   Diagram creating a new instance of the `DenverBroncos`: `broncos_2015 = DenverBroncos.new`.
+-   Diagram how Ruby finds and executes the methods called on `broncos_2015`: `broncos_2015.lose` and `broncos_2015.play_game`.
 
 ## Lab: Model Shapes Using Classes
 
