@@ -93,7 +93,7 @@ For this lab please diagram the class method chain using the following requireme
 - The class `Bronco` has an instance method called `suck`
 - `Bronco` inherits from the class `Football`
 - The class `Football` has an instance method called `play_game`
-- Create a new instance of a player on the Broncos IE `manning = Bronco.new`
+- Create a new instance of a player on the Broncos eg. `manning = Bronco.new`
 - Diagram `manning.suck` and `manning.play_game`
 
 ## Lab: Model Shapes Using Classes
