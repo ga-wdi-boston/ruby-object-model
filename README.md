@@ -26,7 +26,7 @@ By the end of this, students should be able to:
 ## JavaScript Inheriterance
 
 You already know how Javascript object inheritence works just in case you don't
-remeber here are some examples.  Remember that whole prototype thing?
+remeber here is an example.  Remember that whole prototype thing?
 
 ```javascript
 User.prototype.totalDistance = function() {
@@ -39,15 +39,10 @@ User.prototype.totalDistance = function() {
   return result;
 }
 ```
-
-In the case above we created an internal object on the User object from which other
-instances of the User object can inherit.  Now all instances of User can share in
+In the case above we used prototypal inheriteranceon the User object from which
+instances of the User object can inherit. Now all instances of User can share in
 the common property of `totalDistance`
 
-## Lab
-
-This shouldn't take long. In your squads use prototypical inheriterance to create
-a method on an object which other instances of that object can inherit.
 
 ## Ruby Inheriterance
 
@@ -86,6 +81,20 @@ animal = Animal.new
 animal.eat #=> "Nom nom nom"
 animal.speak #=> NoMethodError
 ```
+
+## Demo: Drawing the Class Method Chain
+
+Please follow along as I draw the Ruby class method chain. Think about how
+inheriterance works in JavaScript.
+
+##Lab: Drawing the Ruby class method chain on your own
+
+For this lab please diagram the class method chain using the following requirements:
+- The class `Bronco` has an instance method called `suck`
+- `Bronco` inherits from the class `Football`
+- The class `Football` has an instance method called `play_game`
+- Create a new instance of a player on the Broncos IE `manning = Bronco.new`
+- Diagram `manning.suck` and `manning.play_game`
 
 ## Lab: Model Shapes Using Classes
 
