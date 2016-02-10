@@ -26,7 +26,7 @@ By the end of this, students should be able to:
 ## JavaScript Inheriterance
 
 You already know how Javascript object inheritence works just in case you don't
-remeber here are some examples.  Remember that whole prototype thing?
+remeber here is an example.  Remember that whole prototype thing?
 
 ```javascript
 User.prototype.totalDistance = function() {
@@ -39,15 +39,10 @@ User.prototype.totalDistance = function() {
   return result;
 }
 ```
-
-In the case above we created an internal object on the User object from which other
-instances of the User object can inherit.  Now all instances of User can share in
+In the case above we used prototypal inheriteranceon the User object from which
+instances of the User object can inherit. Now all instances of User can share in
 the common property of `totalDistance`
 
-## Lab
-
-This shouldn't take long. In your squads use prototypical inheriterance to create
-a method on an object which other instances of that object can inherit.
 
 ## Ruby Inheriterance
 
