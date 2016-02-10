@@ -82,6 +82,20 @@ animal.eat #=> "Nom nom nom"
 animal.speak #=> NoMethodError
 ```
 
+## Demo: Drawing the Class Method Chain
+
+Please follow along as I draw the Ruby class method chain. Think about how
+inheriterance works in JavaScript.
+
+##Lab: Drawing the Ruby class method chain on your own
+
+For this lab please diagram the class method chain using the following requirements:
+- The class `Bronco` has an instance method called `suck`
+- `Bronco` inherits from the class `Football`
+- The class `Football` has an instance method called `play_game`
+- Create a new instance of a player on the Broncos IE `manning = Bronco.new`
+- Diagram `manning.suck` and `manning.play_game`
+
 ## Lab: Model Shapes Using Classes
 
 A square is a special kind of rectangle. Create a `Square` class that inherits from `Rectangle` and override any methods you need to change to represent the idea of a `Square` in ruby code.
