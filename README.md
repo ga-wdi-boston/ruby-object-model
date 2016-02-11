@@ -23,10 +23,10 @@ By the end of this, students should be able to:
     this repository.
 1.  Install dependencies with `bundle install`.
 
-## JavaScript Inheriterance
+## JavaScript Inheritance
 
-You already know how Javascript object inheritence works just in case you don't
-remeber here is an example.  Remember that whole prototype thing?
+Remember how JavaScript method lookup works? We use prototypes. Here's an
+example:
 
 ```javascript
 User.prototype.totalDistance = function() {
@@ -39,17 +39,25 @@ User.prototype.totalDistance = function() {
   return result;
 }
 ```
-In the case above we used prototypal inheriteranceon the User object from which
-instances of the User object can inherit. Now all instances of User can share in
-the common property of `totalDistance`
 
+We defined methods by attaching them to the prototype of the User object. New
+instances of User will "inherit" their methods from the User prototype. In this
+example, all instances of User share the common property `totalDistance`.
 
 ## Ruby Inheriterance
 
-But now in Ruby we have classes which we've already gone over.  Ruby classes have
-different ways of inheriting. Take for example the following...
+In Ruby, we have classes instead of prototypes. We attach methods to the class
+since Ruby doesn't use prototypes. Ruby will be our first example of linking
+different objects together in a hierarchy. This process is called "inheritance"
+and the result is what we mean when we say an object "inherits" behavior from
+another object.
 
-Some objects can be classified in multiple ways. These multiple classifications often make sense as a hierarchy. For example, a `Dog` is a kind of `Pet`. It's also a kind of `Animal`. In ruby, we can share code (data or behavior) between two classes using **inheritance**. Let's look at an example of inheritance. Note that a ruby class can only inherit from one other class, so whether you name that class `Pet` or `Animal` will depend on your application.
+Some objects can be classified in multiple ways. These multiple classifications
+often make sense as a hierarchy. For example, a `Dog` is a kind of `Pet`. It's
+also a kind of `Animal`. In Ruby, we can share code (data or behavior) between
+two classes using **inheritance**. Let's look at an example of inheritance. Note
+that a Ruby class can only inherit from one other class, so whether you name
+that class `Pet` or `Animal` will depend on your application.
 
 ```ruby
 class Animal
@@ -82,28 +90,60 @@ animal.eat #=> "Nom nom nom"
 animal.speak #=> NoMethodError
 ```
 
-## Demo: Drawing the Class Method Chain
+## Demo: Drawing the Method Lookup Chain in Ruby and JavaScript
 
-Please follow along as I draw the Ruby class method chain. Think about how
-inheriterance works in JavaScript.
+In Ruby, method lookup occurs through classes. In JavaScript, method lookup
+occurs through inspecting the `.prototype` property on constructor functions.
 
-##Lab: Drawing the Ruby class method chain on your own
+Let's draw the method lookup chain, first through prototypes in JavaScript, and
+then through classes in Ruby.
 
-For this lab please diagram the method lookup chain using the following requirements:
+## Lab: Drawing the Method Lookup Chain in Ruby
+
+Please diagram the method lookup chain using the following requirements:
+
 -   The class `DenverBroncos` has an instance method called `lose`.
 -   `DenverBroncos` inherits from the class `FootballTeam`.
 -   The class `FootballTeam` has an instance method called `play_game`.
--   Diagram creating a new instance of the `DenverBroncos`: `broncos_2015 = DenverBroncos.new`.
--   Diagram how Ruby finds and executes the methods called on `broncos_2015`: `broncos_2015.lose` and `broncos_2015.play_game`.
+-   Diagram creating a new instance of the `DenverBroncos`: `broncos_2015 =
+    DenverBroncos.new`.
+-   Diagram how Ruby finds and executes the methods called on `broncos_2015`:
+    `broncos_2015.lose` and `broncos_2015.play_game`.
 
 ## Lab: Model Shapes Using Classes
 
-A square is a special kind of rectangle. Create a `Square` class that inherits from `Rectangle` and override any methods you need to change to represent the idea of a `Square` in ruby code.
+In a [previous
+lab](https://github.com/ga-wdi-boston/ruby-vs-js-objects#lab-creating-a-shape-class),
+you were asked to create and use a `Shape` class.
 
+A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
+
+Create a `Rectangle` that inherits from `Shape`. You will need to override the
+constructor method inside `Rectangle` to take two sides of different lengths.
+Since all rectangles have four sides, you can set a default value for `@sides`
+inside `Rectangle`'s constructor.
+
+Requirements for `Rectangle`s:
+
+-   Rectangles should be instantiated with `Rectangle.new(3, 4)` to create a
+    rectangle with a length of 3 and a width of 4.
+-   Instances of Rectangle should respond to the `#area` method and give the
+    correct result.
+-   Do not override anything that doesn't need to be overriden.
+
+Next, create a `Square` class that inherits from `Rectangle`.
+
+Requirements for `Square`s:
+
+-   Squares should be instantiated with `Square.new(4)` to create a square with
+    all sides equal to 4.
+-   Instances of Square should respond to the `#area` method and give the
+    correct result.
+-   Do not override anything that doesn't need to be overriden.
 
 ## Additional Resources
 
-- **[Links to a variety of offical language and api documentation](https://www.ruby-lang.org/en/documentation/)**
+-   [Useful links to documentation](https://www.ruby-lang.org/en/documentation/)
 
 ## [License](LICENSE)
 
