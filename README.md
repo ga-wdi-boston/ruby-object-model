@@ -112,7 +112,7 @@ Please diagram the method lookup chain using the following requirements:
 
 ## There is a Better Way (Composition)
 
-Classical inheriterance has it's limitations and we don't want to limit
+Classical inheriterance has its limitations and we don't want to limit
 ourselves, that's where composition comes in.  Let's discuss the code below:
 
 ```ruby
