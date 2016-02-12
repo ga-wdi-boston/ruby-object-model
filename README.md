@@ -110,6 +110,60 @@ Please diagram the method lookup chain using the following requirements:
 -   Diagram how Ruby finds and executes the methods called on `broncos_2015`:
     `broncos_2015.lose` and `broncos_2015.play_game`.
 
+## There is a Better Way (Composition)
+
+Classical inheriterance has it's limitations and we don't want to limit
+ourselves, that's where composition comes in.  Let's discuss the code below:
+
+```ruby
+class Person
+  def initialize
+    @car = Car.new
+  end
+end
+
+class Car
+  def accelerate
+    # code here
+  end
+end
+```
+
+Whenever I create a new instance of a `person`, on initialization an instance of
+a `car` is created as well. This instance of car has all of the methods defined
+in the `Car` class. *It inherits all of methods defined in the `Car` class.*
+
+
+## An Even Better Way (Mixins)
+
+We've dealt with mixin before in our bootstrap-sass training [ga-wdi-boston/html-css-layout-bootstrap-sass](https://github.com/ga-wdi-boston/html-css-layout-bootstrap-sass)
+and the concept is similar. We want to make chunks of code that are resuable
+across of multiple classes.  These "chunks" are called `modules`. Take a look at
+the code below:
+
+```ruby
+module Sleeper
+  def go_to_sleep
+    # code here
+  end
+end
+
+class Person
+  include Sleeper
+end
+
+class Computer
+  include Sleeper
+end
+```
+
+In the code above we defined a `module` called Sleeper. We also define a
+`Person` class and a `Computer` class. By using the keyword `include` followed
+by the name of the module (in this case `Sleeper`) we have access to the methods
+we defined in our module.  This is great because it allows us to keep our code
+*D-R-Y*, not to mention it allows us to be lazy developers (the good kind of 
+lazy).
+
 ## Lab: Model Shapes Using Classes
 
 In a [previous
