@@ -161,7 +161,7 @@ In the code above we defined a `module` called Sleeper. We also define a
 `Person` class and a `Computer` class. By using the keyword `include` followed
 by the name of the module (in this case `Sleeper`) we have access to the methods
 we defined in our module.  This is great because it allows us to keep our code
-*D-R-Y*, not to mention it allows us to be lazy developers (the good kind of 
+*D-R-Y*, not to mention it allows us to be lazy developers (the good kind of
 lazy).
 
 ## Lab: Model Shapes Using Classes
@@ -198,6 +198,7 @@ Requirements for `Square`s:
 ## Additional Resources
 
 -   [Useful links to documentation](https://www.ruby-lang.org/en/documentation/)
+-   [Stack Overflow: Inheriterance](http://stackoverflow.com/questions/15754768/when-do-we-use-ruby-module-vs-using-class-composition)
 
 ## [License](LICENSE)
 
