@@ -29,17 +29,18 @@ Classical inheriterance has its limitations and we don't want to limit
 ourselves, that's where composition comes in.  Let's discuss the code below:
 
 ```ruby
-class Person
+class Car
+  attr_reader :engine
   def initialize
-    @car = Car.new
+    @engine = 1200
   end
 end
 
-class Car
-  def accelerate
-    # code here
-  end
+class Ford < Car
 end
+
+car = Ford.new
+puts car.engine
 ```
 
 Whenever I create a new instance of a `person`, on initialization an instance of
