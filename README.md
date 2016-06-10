@@ -43,10 +43,9 @@ car = Ford.new
 puts car.engine
 ```
 
-Whenever I create a new instance of a `person`, on initialization an instance of
-a `car` is created as well. This instance of car has all of the methods defined
+Whenever I create a new instance of a `Ford`, on initialization an instance of
+a `Car` is created as well. This instance of car has all of the methods defined
 in the `Car` class. *It inherits all of methods defined in the `Car` class.*
-
 
 ## An Even Better Way (Mixins)
 
