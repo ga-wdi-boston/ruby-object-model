@@ -49,10 +49,8 @@ in the `Car` class. *It inherits all of methods defined in the `Car` class.*
 
 ## An Even Better Way (Mixins)
 
-We've dealt with mixin before in our bootstrap-sass training [ga-wdi-boston/html-css-layout-bootstrap-sass](https://github.com/ga-wdi-boston/html-css-layout-bootstrap-sass)
-and the concept is similar. We want to make chunks of code that are resuable
-across of multiple classes.  These "chunks" are called `modules`. Take a look at
-the code below:
+We want to make chunks of code that are resuable across of multiple classes.
+These "chunks" are called `modules`. Take a look at the code below:
 
 ```ruby
 module Sleeper
