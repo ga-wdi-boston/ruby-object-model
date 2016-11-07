@@ -4,8 +4,8 @@
 
 ## Prerequisites
 
--   [ga-wdi-boston/ruby-vs-js-objects](https://github.com/ga-wdi-boston/ruby-vs-js-objects)
--   [ga-wdi-boston/ruby-vs-js-objects-inheritance](https://github.com/ga-wdi-boston/ruby-vs-js-objects-inheritance)
+-   [ga-wdi-boston/ruby-objects](https://github.com/ga-wdi-boston/ruby-objects)
+-   [ga-wdi-boston/ruby--objects-inheritance](https://github.com/ga-wdi-boston/ruby-objects-inheritance)
 
 ## Objectives
 
