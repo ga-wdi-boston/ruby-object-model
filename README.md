@@ -78,7 +78,7 @@ lazy).
 ## Lab: Model Shapes Using Classes
 
 In a [previous
-lab](https://github.com/ga-wdi-boston/ruby-vs-js-objects#lab-creating-a-shape-class),
+lab](https://github.com/ga-wdi-boston/ruby-objects#lab-creating-a-shape-class),
 you were asked to create and use a `Shape` class.
 
 A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
