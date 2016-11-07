@@ -39,8 +39,8 @@ end
 class Ford < Car
 end
 
-car = Ford.new
-puts car.engine
+focus = Ford.new
+puts focus.engine
 ```
 
 Whenever I create a new instance of a `Ford`, on initialization an instance of

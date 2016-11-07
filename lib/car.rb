@@ -10,6 +10,6 @@ end
 class Ford < Car
 end
 
-car = Ford.new
+focus = Ford.new
 
-puts car.engine
+puts focus.engine
