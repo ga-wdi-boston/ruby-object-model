@@ -75,6 +75,14 @@ we defined in our module.  This is great because it allows us to keep our code
 *D-R-Y*, not to mention it allows us to be lazy developers (the good kind of
 lazy).
 
+## What should I use?
+
+Inheritance creates a *subclass* - a class that has access to all of the methods of it's parent class. You should use it if your class is a *type* of it's parent class, like Ford is a type of car. A Ford is a more specialized, less abstract version of the Car class.
+
+Mixins are used when a *behavior* is shared between various classes. People and computers both share the sleep behavior in the example above. People and computers are very different - it wouldn't make sense for them to inherit from the `Sleeper` class, so we use a module to share the behavior.
+
+
+
 ## Lab: Model Shapes Using Classes
 
 In a [previous
