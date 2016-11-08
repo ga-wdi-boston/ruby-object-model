@@ -114,36 +114,6 @@ state.
 
 ## Lab: Model
 
-## Lab: Model Shapes Using Classes
-
-In a [previous
-lab](https://github.com/ga-wdi-boston/ruby-object#lab-creating-a-shape-class),
-you were asked to create and use a `Shape` class.
-
-A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
-
-Create a `Rectangle` that inherits from `Shape`. You will need to override the
-constructor method inside `Rectangle` to take two sides of different lengths.
-Since all rectangles have four sides, you can set a default value for `@sides`
-inside `Rectangle`'s constructor.
-
-Requirements for `Rectangle`s:
-
--   Rectangles should be instantiated with `Rectangle.new(3, 4)` to create a
-    rectangle with a length of 3 and a width of 4.
--   Instances of Rectangle should respond to the `#area` method and give the
-    correct result.
--   Do not override anything that doesn't need to be overriden.
-
-Next, create a `Square` class that inherits from `Rectangle`.
-
-Requirements for `Square`s:
-
--   Squares should be instantiated with `Square.new(4)` to create a square with
-    all sides equal to 4.
--   Instances of Square should respond to the `#area` method and give the
-    correct result.
--   Do not override anything that doesn't need to be overriden.
 
 ## Additional Resources
 
