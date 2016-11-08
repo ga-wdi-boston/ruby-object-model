@@ -42,6 +42,31 @@ puts focus.engine
 
 Whenever I create a new instance of a `Ford`, Ruby looks for a method called `initialize`. In this case, it doesn't find that method on the `Ford` class, so it finds the method on it's parent `Car`. `focus` is an instance of the `Car` class,  so *it inherits all of methods defined in the `Car` class.*
 
+## Ruby Composition
+
+```ruby
+class Album
+  attr_accessor :tracks
+
+  def initialze
+    @tracks = []
+  end
+end
+
+class Song
+  def initialize(title)
+    @title = title
+  end
+end
+
+lemonade = Album.new()
+lemonade.tracks << Song.new('Formation')
+```
+
+Sometimes, we want build more complex objext by using specific instances of other
+ objects. We can use composition to acheive this. In this case, we will add
+ instances of the `Song` class to the tracks of our album.
+
 ## Ruby Mixins
 
 We want to make chunks of code that are resuable across of multiple classes.
@@ -70,18 +95,29 @@ we defined in our module.  This is great because it allows us to keep our code
 *D-R-Y*, not to mention it allows us to be lazy developers (the good kind of
 lazy).
 
+You will sometimes hear the word 'composition' when referring to mixins.
+
 ## What should I use?
 
-Inheritance creates a *subclass* - a class that has access to all of the methods of it's parent class. You should use it if your class is a *type* of it's parent class, like Ford is a type of car. A Ford is a more specialized, less abstract version of the Car class.
+`is-a`: A Ford *is a* car. Inheritance creates a *subclass* - a class that has access to all of the methods of it's parent class. You should use it if your class is a *type* of it's parent class, like Ford is a type of car. A Ford is a more specialized, less abstract version of the Car class.
 
-Mixins are used when a *behavior* is shared between various classes. People and computers both share the sleep behavior in the example above. People and computers are very different - it wouldn't make sense for them to inherit from the `Sleeper` class, so we use a module to share the behavior.
+`has-a`: An Album *has a* song on it. We use composition when class instances
+contain instances of other classes.
 
+`behaves-as`: Mixins are used when a *behavior* is shared between various classes. People and computers both share the sleep behavior in the example above. People and computers are very different - it wouldn't make sense for them to inherit from the `Sleepable` class.
 
+### Class or mixin?
+When deciding whether to write a class or mixin, ask yourself if what you're
+writing will need an initialze function. If you do, you should be writing a class.
+Classes have state and behavior. Mixins are only for behavior - they don't hold
+state.
+
+## Lab: Model
 
 ## Lab: Model Shapes Using Classes
 
 In a [previous
-lab](https://github.com/ga-wdi-boston/ruby-objects#lab-creating-a-shape-class),
+lab](https://github.com/ga-wdi-boston/ruby-object#lab-creating-a-shape-class),
 you were asked to create and use a `Shape` class.
 
 A `Rectangle` is a `Shape`, and a `Square` is a `Rectangle`.
