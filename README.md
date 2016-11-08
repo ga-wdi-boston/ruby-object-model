@@ -11,9 +11,9 @@
 
 By the end of this, students should be able to:
 
--   Give two reasons why composition and Mixins are desirable.
+-   Give two reasons why inheritance and Mixins are desirable.
 -   Write a class which inherits from another class.
--   Describe why composition is preferred to inheritance.
+-   Describe why mixins are preferred to inheritance.
 
 ## Preparation
 
@@ -43,9 +43,7 @@ focus = Ford.new
 puts focus.engine
 ```
 
-Whenever I create a new instance of a `Ford`, on initialization an instance of
-a `Car` is created as well. This instance of car has all of the methods defined
-in the `Car` class. *It inherits all of methods defined in the `Car` class.*
+Whenever I create a new instance of a `Ford`, Ruby looks for a method called `initialize`. In this case, it doesn't find that method on the `Ford` class, so it finds the method on it's parent `Car`. `focus` is an instance of the `Car` class,  so *it inherits all of methods defined in the `Car` class.*
 
 ## An Even Better Way (Mixins)
 
