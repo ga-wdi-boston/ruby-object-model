@@ -21,12 +21,9 @@ By the end of this, students should be able to:
     this repository.
 1.  Install dependencies with `bundle install`.
 
-## JavaScript Inheritance
+## Ruby Inheritance
 
-## There is a Better Way (Composition)
-
-Classical inheriterance has its limitations and we don't want to limit
-ourselves, that's where composition comes in.  Let's discuss the code below:
+Let's discuss the code below:
 
 ```ruby
 class Car
@@ -45,24 +42,24 @@ puts focus.engine
 
 Whenever I create a new instance of a `Ford`, Ruby looks for a method called `initialize`. In this case, it doesn't find that method on the `Ford` class, so it finds the method on it's parent `Car`. `focus` is an instance of the `Car` class,  so *it inherits all of methods defined in the `Car` class.*
 
-## An Even Better Way (Mixins)
+## Ruby Mixins
 
 We want to make chunks of code that are resuable across of multiple classes.
 These "chunks" are called `modules`. Take a look at the code below:
 
 ```ruby
-module Sleeper
+module Sleepable
   def go_to_sleep
     # code here
   end
 end
 
 class Person
-  include Sleeper
+  include Sleepable
 end
 
 class Computer
-  include Sleeper
+  include Sleepable
 end
 ```
 
