@@ -13,7 +13,8 @@ By the end of this, students should be able to:
 
 -   Give two reasons why inheritance and Mixins are desirable.
 -   Write a class which inherits from another class.
--   Describe why mixins are preferred to inheritance.
+-   Write a mixin
+-   Describe the difference between inheritance, composition, and mixins
 
 ## Preparation
 
@@ -48,7 +49,7 @@ Whenever I create a new instance of a `Ford`, Ruby looks for a method called `in
 class Album
   attr_accessor :tracks
 
-  def initialze
+  def initialize
     @tracks = []
   end
 end
@@ -63,7 +64,7 @@ lemonade = Album.new()
 lemonade.tracks << Song.new('Formation')
 ```
 
-Sometimes, we want build more complex objext by using specific instances of other
+Sometimes, we want build more complex object by using specific instances of other
  objects. We can use composition to acheive this. In this case, we will add
  instances of the `Song` class to the tracks of our album.
 
@@ -108,7 +109,7 @@ contain instances of other classes.
 
 ### Class or mixin?
 When deciding whether to write a class or mixin, ask yourself if what you're
-writing will need an initialze function. If you do, you should be writing a class.
+writing will need an initialize function. If you do, you should be writing a class.
 Classes have state and behavior. Mixins are only for behavior - they don't hold
 state.
 
