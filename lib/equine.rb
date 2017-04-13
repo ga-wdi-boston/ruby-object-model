@@ -1,11 +1,20 @@
 class Equine
+  def eat_grass
+  end
 end
 
-class Horse
+module Ridable
+  def ride
+  end
 end
 
-class Mule
+class Horse < Equine
+  include Ridable
 end
 
-class Zebra
+class Mule < Equine
+  include Ridable
+end
+
+class Zebra < Equine
 end
